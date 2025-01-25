@@ -1,8 +1,15 @@
 @font-face {
     font-family: 'Panton Rust Script';
     src: url('fonts/myFont.ttf') format('truetype');
-    font-weight: 600; /* SemiBold */
-    font-style: italic; /* Italic */
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Forma DJR Cyrillic Deck';
+    src: url('fonts/forma-djr-cyrillic-deck-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
   
   body {
@@ -129,34 +136,35 @@
   }
 
   .screen-form {
-    height: 100vh; /* Экранная форма занимает всю высоту экрана */
+    height: 100vh;
     background: url('image/mainFramePng1.png') no-repeat center center/cover; /* Фон экранной формы */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Шапка сверху, контент центрируется */
+    justify-content: space-between; 
   }
   
   .header {
+    font-family: 'Forma DJR Cyrillic Deck', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 61px; /* Задаём высоту */
-    width: 1336px; /* Задаём ширину */
-    margin: 0 auto; /* Централизация по горизонтали */
-    background-color: #f8f9fa; /* Задний фон */
-    border-radius: 30px; /* Скруглённые края */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень для объёма */
-    padding: 0 20px; /* Внутренний отступ */
+    height: 61px; 
+    width: 1336px; 
+    margin: 0 auto; 
+    background-color: #f8f9fa; 
+    border-radius: 30px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 0 20px;
   }
   
   .header-container {
-    width: 1336px; /* Фиксированная ширина */
-    height: 61px; /* Фиксированная высота */
-    margin: 30px auto; /* Централизуем шапку с отступом сверху */
+    width: 1336px;
+    height: 61px;
+    margin: 30px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px; /* Внутренние отступы */
+    padding: 0 20px;
     background-color: #f8f9fa;
     border-radius: 30px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -164,7 +172,8 @@
   
   .nav-list {
     display: flex;
-    gap: 30px; /* Промежутки между пунктами меню */
+    font-size: 16px;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -172,11 +181,24 @@
   
   .nav-item {
     display: flex;
+    text-decoration: none; 
     align-items: center;
+  }
+
+  .nav-item a {
+    text-decoration: none; /* Убираем подчёркивание */
+    color: inherit; /* Унаследовать цвет текста */
+    font-size: 16px;
+    font-family: 'Forma DJR Cyrillic Deck', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item a:hover {
+    color: #FFA500; /* Цвет при наведении */
   }
   
   .nav-image {
-    height: 40px; /* Устанавливаем размеры для изображения "Главная" */
+    height: 40px;
     width: auto;
     cursor: pointer;
   }
@@ -184,7 +206,7 @@
   .header-actions {
     display: flex;
     align-items: center;
-    gap: 30px; /* Расстояние между иконками и номером телефона */
+    gap: 30px;
   }
   
   .social-icons img {
@@ -200,6 +222,7 @@
   
   .phone-number {
     font-size: 16px;
+    font-family: 'Forma DJR Cyrillic Deck', sans-serif;
     color: #333;
   }
   
@@ -222,14 +245,14 @@
     font-family: 'Panton Rust Script', sans-serif;
     font-size: 26px;
     font-style: italic;
-    color: #d32d2d; /* Красный цвет */
-    font-weight: 600; /* SemiBold */
+    color: #d32d2d;
+    font-weight: 600;
     margin-bottom: 10px;
   }
   
   .main-heading {
     font-size: 64px;
-    color: #002f4b; /* Темно-синий */
+    color: #002f4b;
     font-weight: bold;
     line-height: 1.1;
     margin: 0;
@@ -238,11 +261,11 @@
   .heading-line {
     display: flex;
     align-items: center;
-    gap: 10px; /* Расстояние между словами и значком */
+    gap: 10px;
   }
   
   .online-icon {
-    width: 60px; /* Размер значка */
+    width: 60px;
     height: auto;
   }
   
@@ -252,5 +275,124 @@
     max-width: 600px;
     line-height: 1.6;
     margin-top: 20px;
+  }
+
+  .footer {
+    background-color: #f8f8f8;
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-logo-section {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo-section p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer-contact-section, 
+  .footer-links-section {
+    flex: 1;
+  }
+  
+  .footer-contact-section h3,
+  .footer-links-section h3 {
+    font-size: 18px;
+    color: #002f4b;
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact-section p,
+  .footer-links-section ul {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .footer-contact-section a,
+  .footer-links-section a {
+    text-decoration: none;
+    color: #002f4b;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-contact-section a:hover,
+  .footer-links-section a:hover {
+    color: #d32d2d;
+  }
+  
+  .footer-links-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+  
+  .footer-links-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .public-offer {
+    display: block;
+    font-size: 14px;
+    color: #002f4b;
+    text-decoration: none;
+  }
+  
+  .public-offer:hover {
+    color: #d32d2d;
+  }
+  
+  .back-to-top {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .back-to-top img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .back-to-top img:hover {
+    transform: scale(1.1);
   }
 
