@@ -141,6 +141,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
+    overflow: hidden;
   }
   
   .header {
@@ -156,6 +157,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 0 20px;
   }
+
   
   .header-container {
     width: 1336px;
@@ -186,15 +188,15 @@
   }
 
   .nav-item a {
-    text-decoration: none; /* Убираем подчёркивание */
-    color: inherit; /* Унаследовать цвет текста */
+    text-decoration: none;
+    color: inherit;
     font-size: 16px;
     font-family: 'Forma DJR Cyrillic Deck', sans-serif;
     transition: color 0.3s ease;
   }
   
   .nav-item a:hover {
-    color: #FFA500; /* Цвет при наведении */
+    color: #FFA500;
   }
   
   .nav-image {
@@ -235,6 +237,7 @@
   .main-section {
     width: 1340px;
     height: 394px;
+    margin-top: -100px;
     position: absolute;
     top: 214px;
     left: 290px;
@@ -276,6 +279,36 @@
     line-height: 1.6;
     margin-top: 20px;
   }
+
+  .features-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Расстояние между элементами */
+    margin: 0 auto;
+    max-width: 1200px; /* Ограничение ширины контейнера */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.feature {
+    flex: 1; /* Все элементы занимают равное пространство */
+    max-width: 200px; /* Уменьшение размеров */
+    text-align: center;
+}
+
+.feature-image {
+    width: 100%; /* Уменьшение размера изображения в пределах контейнера */
+    height: auto;
+    border-radius: 30px; /* Если нужно округление углов */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-image:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
 
   .footer {
     background-color: #f8f8f8;
@@ -395,4 +428,6 @@
   .back-to-top img:hover {
     transform: scale(1.1);
   }
+
+
 
