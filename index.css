@@ -514,97 +514,115 @@
     transform: scale(1.1);
   }
 
-  .awards-section {
-    position: relative;
+  .program-section {
     text-align: center;
-    padding: 50px 0;
-    background-image: url('image/cloud.png');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+    padding: 50px 20px;
+    background-color: #e9f5ff; /* Нежно-голубой фон */
   }
   
-  .awards-heading {
-    font-family: 'Forma DJR Cyrillic Deck', sans-serif;
-    font-size: 48px;
-    font-weight: bold;
+  .program-title {
+    font-size: 45px;
+    font-family: 'Forma DJR Cyrillic Deck';
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #002B41;
+  }
+  
+  .program-title .highlight {
+    font-family: 'Panton Rust Script';
+    font-weight: 600;
+    font-style: italic;
+    color: #ff4b5c;
+    font-style: italic;
+  }
+  
+  /* Карточки программы */
+  .program-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  .program-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .program-logo {
+    display: block;
+    margin: 0 auto 15px;
+    width: 100px;
+  }
+  
+  .program-name {
+    font-size: 24px;
+    color: #0b132b;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .program-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .program-features li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .program-features li::before {
+    content: "✔️"; /* Галочка */
+    position: absolute;
+    left: 0;
+    color: #ff4b5c;
+  }
+  
+  /* Цены и кнопки */
+  .program-bottom {
+    margin-top: auto; /* Сдвигает ценник и кнопку вниз */
+    text-align: center;
+  }
+  
+  .program-price {
+    font-size: 20px;
     margin-bottom: 10px;
   }
   
-  .awards-subheading {
-    font-family: 'Panton Rust Script', sans-serif;
-    font-size: 24px;
-    font-style: italic;
-    color: #FF4500;
+  .program-price del {
+    font-family: 'Forma DJR Cyrillic Deck';
+    color: #385462;
+    margin-right: 10px;
   }
   
-  .awards-years {
-    margin-bottom: 20px;
+  .program-price span {
+    font-family: 'Forma DJR Cyrillic Deck';
+    color: #002B41;
+    font-size: 30px;
+    font-weight: bold;
   }
   
-  .year-link {
-    font-family: 'Forma DJR Cyrillic Deck', sans-serif;
-    font-size: 18px;
-    margin: 0 10px;
-    text-decoration: none;
-    color: #000;
+  .program-button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
   }
   
-  .awards-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative;
+  .program-button:hover {
+    background-color: #ff6b6b;
   }
-  
-  .award-item {
-    flex: 0 0 33%;
-    max-width: 33%;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-  
-  .award-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-  }
-  
-  .left img {
-    object-position: right;
-  }
-  
-  .right img {
-    object-position: left;
-  }
-  
-  .center img {
-    object-position: center;
-  }
-  
-  .awards-slider:before,
-  .awards-slider:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 150px;
-    background: linear-gradient(to right, #f5f5f5 0%, transparent 100%);
-    z-index: 1;
-  }
-  
-  .awards-slider:before {
-    left: 0;
-  }
-  
-  .awards-slider:after {
-    right: 0;
-  }
-
-
 
