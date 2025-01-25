@@ -255,6 +255,7 @@
   }
   
   .main-heading {
+    font-family: 'Forma DJR Cyrillic Deck';
     font-size: 64px;
     color: #002f4b;
     font-weight: bold;
@@ -323,7 +324,7 @@
   }
   
   .cloud-heading {
-    font-family: 'Forma DJR Cyrillic Deck', sans-serif;
+    font-family: 'Forma DJR Cyrillic Deck';
     font-size: 70px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -521,11 +522,12 @@
   }
   
   .program-title {
-    font-size: 45px;
     font-family: 'Forma DJR Cyrillic Deck';
-    font-weight: 500;
-    margin-bottom: 40px;
-    color: #002B41;
+    font-size: 64px;
+    color: #002f4b;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0;
   }
   
   .program-title .highlight {
@@ -659,10 +661,11 @@
   
   .section-title {
     font-family: 'Forma DJR Cyrillic Deck';
-    color: #002B41;
-    font-size: 60px;
+    font-size: 64px;
+    color: #002f4b;
     font-weight: bold;
-    margin-bottom: 30px;
+    line-height: 1.1;
+    margin: 0;
   }
   
   .highlight {
@@ -736,10 +739,11 @@
   
   .form-title {
     font-family: 'Forma DJR Cyrillic Deck';
-    font-size: 60px;
+    font-size: 64px;
+    color: #002f4b;
     font-weight: bold;
-    color: #002B41;
-    margin-bottom: 20px;
+    line-height: 1.1;
+    margin: 0;
   }
   
   .highlight-title {
@@ -813,6 +817,79 @@
     max-width: 100%;
     border-radius: 60px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .map-section {
+    position: relative;
+    background: url("image/map.png") no-repeat center center;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 20px;
+  }
+  
+  .map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .map-title-container {
+    background: white;
+    opacity: 85%;
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  
+  .map-title {
+    font-family: 'Forma DJR Cyrillic Deck';
+    font-size: 64px;
+    color: #002f4b;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0;
+  }
+  
+  .map-title .highlight {
+    color: red;
+    font-style: italic;
+  }
+  
+  .map-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: auto;
+  }
+  
+  .social-media img,
+  .contact-info img,
+  .address img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  .address {
+    text-align: center;
+  }
+  
+  .address img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  .contact-info,
+  .social-media,
+  .address {
+    flex: 1;
+    text-align: center;
   }
 
 
