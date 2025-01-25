@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Panton Rust Script';
+    src: url('fonts/myFont.ttf') format('truetype');
+    font-weight: 600; /* SemiBold */
+    font-style: italic; /* Italic */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-family: 'Forma DJR Cyrillic Deck Bold', sans-serif;
+    font-size: 116px;
+    line-height: 110%;
+  }
+  
+  .text-16 {
+    font-family: 'Forma DJR Cyrillic Deck Regular', sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+  }
+  
+  .text-20 {
+    font-family: 'Forma DJR Cyrillic Deck Regular', sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+  }
+  
+  h4 {
+    font-family: 'Forma DJR Cyrillic Variable Micro Bold', sans-serif;
+    font-size: 26px;
+    line-height: 110%;
+  }
+  
+  h2 {
+    font-family: 'Forma DJR Cyrillic Deck Bold', sans-serif;
+    font-size: 90px;
+    line-height: 110%;
+  }
+  
+  h2.panton {
+    font-family: 'Panton Rust Script', sans-serif;
+    font-size: 64px;
+    line-height: 110%;
+  }
+  
+  h3 {
+    font-family: 'Forma DJR Cyrillic Deck Medium', sans-serif;
+    font-size: 45px;
+    line-height: 120%;
+  }
+  
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 64px;
+      line-height: 110%;
+    }
+  
+    .text-16 {
+      font-size: 16px;
+      line-height: 120%;
+    }
+  
+    .text-20 {
+      font-size: 20px;
+      line-height: 120%;
+    }
+  
+    h4 {
+      font-size: 26px;
+      line-height: 110%;
+    }
+  
+    h2 {
+      font-size: 48px;
+      line-height: 110%;
+    }
+  
+    h2.panton {
+      font-size: 36px;
+      line-height: 110%;
+    }
+  
+    h3 {
+      font-size: 25px;
+      line-height: 110%;
+    }
+  
+    .text-12 {
+      font-family: 'Forma DJR Cyrillic Deck Regular', sans-serif;
+      font-size: 12px;
+      line-height: 120%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 40px;
+      line-height: 110%;
+    }
+  
+    .text-16 {
+      font-size: 16px;
+      line-height: 120%;
+    }
+  
+    h4 {
+      font-size: 22px;
+      line-height: 120%;
+    }
+  
+    h2 {
+      font-size: 32px;
+      line-height: 110%;
+    }
+  
+    h2.panton {
+      font-size: 22px;
+      line-height: auto;
+    }
+  
+    h3 {
+      font-size: 25px;
+      line-height: 110%;
+    }
+  }
+
+  .screen-form {
+    height: 100vh; /* Экранная форма занимает всю высоту экрана */
+    background: url('image/mainFramePng1.png') no-repeat center center/cover; /* Фон экранной формы */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Шапка сверху, контент центрируется */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 61px; /* Задаём высоту */
+    width: 1336px; /* Задаём ширину */
+    margin: 0 auto; /* Централизация по горизонтали */
+    background-color: #f8f9fa; /* Задний фон */
+    border-radius: 30px; /* Скруглённые края */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень для объёма */
+    padding: 0 20px; /* Внутренний отступ */
+  }
+  
+  .header-container {
+    width: 1336px; /* Фиксированная ширина */
+    height: 61px; /* Фиксированная высота */
+    margin: 30px auto; /* Централизуем шапку с отступом сверху */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* Внутренние отступы */
+    background-color: #f8f9fa;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 30px; /* Промежутки между пунктами меню */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-image {
+    height: 40px; /* Устанавливаем размеры для изображения "Главная" */
+    width: auto;
+    cursor: pointer;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Расстояние между иконками и номером телефона */
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .phone-number {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .about-icon {
+    width: 120px;
+    height: 41px;
+    cursor: pointer;
+  }
+  
+  .main-section {
+    width: 1340px;
+    height: 394px;
+    position: absolute;
+    top: 214px;
+    left: 290px;
+    text-align: left;
+  }
+  
+  .location {
+    font-family: 'Panton Rust Script', sans-serif;
+    font-size: 26px;
+    font-style: italic;
+    color: #d32d2d; /* Красный цвет */
+    font-weight: 600; /* SemiBold */
+    margin-bottom: 10px;
+  }
+  
+  .main-heading {
+    font-size: 64px;
+    color: #002f4b; /* Темно-синий */
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0;
+  }
+  
+  .heading-line {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между словами и значком */
+  }
+  
+  .online-icon {
+    width: 60px; /* Размер значка */
+    height: auto;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #333;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+
